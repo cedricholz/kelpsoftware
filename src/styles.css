@@ -116,3 +116,81 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Legal pages (privacy, terms) ===== */
+
+.legal {
+  gap: 32px;
+}
+
+.legal article {
+  max-width: 64ch;
+}
+
+.legal-eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.legal article h1 {
+  font-size: clamp(28px, 4.5vw, 36px);
+  line-height: 1.2;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.legal-date {
+  margin: 0 0 28px;
+  color: var(--fg-muted);
+  font-size: 14px;
+}
+
+.legal article h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 32px 0 10px;
+  letter-spacing: -0.005em;
+}
+
+.legal article p,
+.legal article li {
+  color: var(--fg);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.legal article p {
+  margin: 0 0 14px;
+}
+
+.legal article ul {
+  padding-left: 20px;
+  margin: 0 0 18px;
+}
+
+.legal article li {
+  margin-bottom: 8px;
+}
+
+.legal article strong {
+  color: var(--fg);
+}
+
+.legal-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--fg-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.legal-footer-nav a {
+  color: var(--accent);
+}

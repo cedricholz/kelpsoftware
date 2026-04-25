@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/kelpmark.tsx","./src/main.tsx","./src/vite-env.d.ts"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/kelpmark.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/pages/home.tsx","./src/pages/stackslayout.tsx","./src/pages/stacksprivacypolicy.tsx","./src/pages/stacksterms.tsx"],"version":"5.9.3"}
