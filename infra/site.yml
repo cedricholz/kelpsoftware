@@ -6,6 +6,21 @@ Parameters:
     Type: String
     Description: Globally unique S3 bucket name (e.g. kelpsoftware-site).
     Default: kelpsoftware-site
+  CertificateArn:
+    Type: String
+    Description: ACM certificate ARN in us-east-1 covering kelpsoftware.com and www.kelpsoftware.com.
+    Default: ""
+  DomainName:
+    Type: String
+    Description: Apex domain to serve the site on.
+    Default: kelpsoftware.com
+  WwwDomainName:
+    Type: String
+    Description: www alias domain.
+    Default: www.kelpsoftware.com
+
+Conditions:
+  HasCustomDomain: !Not [!Equals [!Ref CertificateArn, ""]]
 
 Resources:
   SiteBucket:
@@ -61,8 +76,17 @@ Resources:
           - ErrorCode: 404
             ResponseCode: 200
             ResponsePagePath: /index.html
-        ViewerCertificate:
-          CloudFrontDefaultCertificate: true
+        Aliases: !If
+          - HasCustomDomain
+          - - !Ref DomainName
+            - !Ref WwwDomainName
+          - !Ref AWS::NoValue
+        ViewerCertificate: !If
+          - HasCustomDomain
+          - AcmCertificateArn: !Ref CertificateArn
+            SslSupportMethod: sni-only
+            MinimumProtocolVersion: TLSv1.2_2021
+          - CloudFrontDefaultCertificate: true
 
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
