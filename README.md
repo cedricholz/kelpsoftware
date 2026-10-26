@@ -1,6 +1,7 @@
 # Kelp Software site
 
-Static React (Vite + TS) marketing site for kelpsoftware.com.
+Static React (Vite + TS) site for kelpsoftware.com, plus the privacy, terms,
+and support pages for Kelp's apps.
 
 ## Local dev
 
@@ -11,74 +12,75 @@ npm run build    # outputs to dist/
 npm run preview  # serve the built dist/ locally
 ```
 
-## Hosting (AWS, cheap)
+## Pages
 
-The infra is one CloudFormation stack: a private S3 bucket for the build
-output, fronted by a CloudFront distribution using Origin Access Control
-(OAC). The bucket isn't public — only CloudFront can read from it.
+| Path                     | Page                                  |
+| ------------------------ | ------------------------------------- |
+| `/`                      | Home                                  |
+| `/stacks/privacy-policy` | Stacks privacy policy                 |
+| `/stacks/terms`          | Stacks terms of service               |
+| `/tidemark/privacy`      | Tidemark privacy policy (App Store listing) |
+| `/tidemark/support`      | Tidemark support (App Store listing)  |
 
-### One-time setup
+App pages share `src/pages/AppLegalLayout.tsx`. The Tidemark URLs are linked
+from the Shopify App Store listing, so keep them stable. Shopify warns apps
+whose privacy link goes dead.
 
-```bash
-aws cloudformation deploy \
-  --stack-name kelpsoftware-site \
-  --template-file infra/site.yml \
-  --parameter-overrides BucketName=kelpsoftware-site \
-  --capabilities CAPABILITY_NAMED_IAM
-```
+## Brand assets
 
-Grab the outputs:
+`brand/` holds the source kits; `public/` holds only what the site serves.
 
-```bash
-aws cloudformation describe-stacks \
-  --stack-name kelpsoftware-site \
-  --query 'Stacks[0].Outputs'
-```
+- `brand/` – Kelp Software kit (start with `brand/START-HERE.txt`)
+- `brand/tidemark/` – Tidemark app kit (`brand/tidemark/START-HERE.txt`)
 
-You'll get a `*.cloudfront.net` URL you can hit immediately.
+Colors are defined once as CSS variables at the top of `src/styles.css`.
 
-### Deploy from your laptop
+## Deploying
+
+Pushing to `main` deploys automatically. `.github/workflows/deploy.yml`
+builds the site, syncs `dist/` to S3, and invalidates CloudFront. It takes
+about 20 seconds. To redeploy without a code change, run the **Deploy**
+workflow from the repo's Actions tab.
+
+The workflow authenticates with GitHub OIDC; no AWS keys are stored in GitHub.
+It assumes `kelpsoftware-site-github-deploy`, a role created by
+`infra/deploy-role.yml` (stack `kelpsoftware-site-deploy`, us-west-1). The role
+only trusts pushes to `main` in this repo and can only write to the site bucket
+and invalidate its distribution.
+
+Caching: files under `assets/` are content-hashed and cached for a year.
+Everything else (HTML, favicons, logos, manifest) revalidates on every
+request, so replacing them takes effect on the next deploy.
+
+### Where it lives
+
+| Thing                   | Value                                   |
+| ----------------------- | --------------------------------------- |
+| AWS account             | 433723587324                            |
+| S3 bucket               | `kelpsoftware-site` (us-west-1, private) |
+| CloudFront distribution | `E1LOPE4QDIH8SX`                        |
+| Domains                 | kelpsoftware.com, www.kelpsoftware.com  |
+
+`infra/site.yml` describes the bucket and distribution: a private bucket that
+only CloudFront can read (Origin Access Control). Unknown paths return
+`index.html`, so client-side routes like `/tidemark/privacy` work on a direct
+load.
+
+### Manual deploy (fallback)
+
+With credentials for the account above:
 
 ```bash
 npm run build
-aws s3 sync dist/ s3://kelpsoftware-site/ --delete
-aws cloudfront create-invalidation \
-  --distribution-id <DISTRIBUTION_ID> --paths "/*"
+aws s3 sync dist/assets s3://kelpsoftware-site/assets --delete \
+  --cache-control "public,max-age=31536000,immutable"
+aws s3 sync dist/ s3://kelpsoftware-site/ --delete --exclude "assets/*" \
+  --cache-control "public,max-age=0,must-revalidate"
+aws cloudfront create-invalidation --distribution-id E1LOPE4QDIH8SX --paths "/*"
 ```
-
-### Deploy via CodeBuild
-
-`buildspec.yml` does `npm ci → npm run build → s3 sync → cloudfront
-invalidate`. Hook it up by:
-
-1. Create a CodeBuild project pointed at this repo (GitHub source,
-   webhook on push to `main`).
-2. Use the `aws/codebuild/standard:7.0` image (has Node 22).
-3. Set env vars on the project:
-   - `SITE_BUCKET` = `kelpsoftware-site`
-   - `DISTRIBUTION_ID` = the CloudFront id from the stack outputs
-4. Attach an IAM role with: `s3:PutObject`, `s3:DeleteObject`,
-   `s3:ListBucket` on the bucket, and
-   `cloudfront:CreateInvalidation` on the distribution.
-
-## Custom domain (when you're ready)
-
-1. Request an ACM cert for `kelpsoftware.com` **in `us-east-1`** (CloudFront
-   only reads certs from that region).
-2. Add `Aliases` and `ViewerCertificate` (with `AcmCertificateArn`,
-   `SslSupportMethod: sni-only`, `MinimumProtocolVersion: TLSv1.2_2021`)
-   to the distribution in `infra/site.yml`.
-3. Point a Route 53 alias (or your registrar's CNAME) at the
-   distribution domain.
 
 ## What this costs
 
-For a low-traffic landing page, this is effectively free:
-
-- **S3 storage** — a few hundred KB. Pennies per year.
-- **CloudFront** — 1 TB out + 10M requests/month free forever.
-- **Route 53** (if used) — $0.50/month per hosted zone.
-- **ACM cert** — free.
-
-CodeBuild charges per build minute (`general1.small` is ~$0.005/min).
-A build here runs in well under a minute.
+For a low-traffic site, effectively nothing: a few MB of S3 storage, and
+CloudFront's free tier (1 TB out and 10M requests a month). GitHub Actions
+minutes are free for this usage.

@@ -11,8 +11,9 @@ export function TidemarkSupport() {
     >
       <p>
         Tidemark backs up your Shopify store's products, collections, and
-        media every night and lets you restore anything that changes or goes
-        missing.
+        media. Each change is saved within seconds of it happening, with a
+        full backup every night, so you can restore anything that changes or
+        goes missing.
       </p>
 
       <h2>Get help</h2>
