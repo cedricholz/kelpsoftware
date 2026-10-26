@@ -37,8 +37,8 @@ export function TidemarkPrivacyPolicy() {
         </li>
         <li>
           <strong>Stock levels:</strong> the quantity of each product variant
-          at each location, and a log of each change (the quantity before and
-          after, and when it changed).
+          at each location, the names of your locations, and a log of each
+          change (the quantity before and after, and when it changed).
         </li>
         <li>
           <strong>Pages and blogs:</strong> pages, blogs, and blog posts,
@@ -60,9 +60,8 @@ export function TidemarkPrivacyPolicy() {
         </li>
         <li>
           <strong>Discounts:</strong> titles, codes, values, eligibility
-          rules, and usage limits. Where a discount is limited to specific
-          customers or customer segments, the App stores only their Shopify
-          IDs, not any customer details.
+          rules, and usage limits. The App does not capture which customers
+          or customer segments a discount is limited to.
         </li>
         <li>
           <strong>Custom data:</strong> metafield definitions, metaobject
@@ -74,15 +73,20 @@ export function TidemarkPrivacyPolicy() {
         </li>
       </ul>
       <p>
-        You can download a copy of any backed-up theme version as a ZIP file.
-        Each download link is private and expires after one hour.
+        You can download a nightly backup archive, a products spreadsheet
+        (CSV), or any backed-up theme version as a ZIP file. Download links
+        are private and expire after one hour, and the spreadsheets and ZIP
+        files made for a download are deleted within two days. Image links
+        inside a products spreadsheet last 7 days so Shopify can import the
+        images.
       </p>
 
       <h2>Store and account information</h2>
       <ul>
         <li>
           <strong>Store details:</strong> your shop domain, shop name, the
-          store's contact email address, currency, and timezone.
+          store owner's name, the store's contact email address, currency, and
+          timezone. We use the owner's name to address you by name.
         </li>
         <li>
           <strong>App settings:</strong> your nightly backup time, retention
@@ -90,8 +94,9 @@ export function TidemarkPrivacyPolicy() {
         </li>
         <li>
           <strong>Activity records:</strong> the numeric Shopify staff user ID
-          of the person who started a backup or restore. We do not store staff
-          names or email addresses.
+          of the person who started a backup, restore, or export, or changed
+          settings or the plan. We do not store staff names or email
+          addresses.
         </li>
         <li>
           <strong>Access tokens:</strong> Shopify access tokens that let the
@@ -102,9 +107,7 @@ export function TidemarkPrivacyPolicy() {
       <h2>Customer and order data</h2>
       <p>
         The App does not currently request access to, collect, or store your
-        customers' personal information or your orders. Discount eligibility
-        rules may reference customers by Shopify ID only, as described above.
-        If we add customer
+        customers' personal information or your orders. If we add customer
         or order backups in the future, we will update this policy before
         that feature is available and will handle that data in line with
         Shopify's protected customer data requirements.
@@ -121,7 +124,9 @@ export function TidemarkPrivacyPolicy() {
       <h2>Billing</h2>
       <p>
         Paid plans are billed through Shopify. Shopify handles payment, and
-        the App never receives or stores your payment details.
+        the App never receives or stores your payment details. The App stores
+        your current plan, Shopify's subscription ID for it, and your trial
+        start date.
       </p>
 
       <h2>Service providers</h2>
@@ -151,7 +156,10 @@ export function TidemarkPrivacyPolicy() {
       <h2>Retention</h2>
       <p>
         The App keeps history for the retention period shown in its
-        settings, which depends on your plan.
+        settings, which depends on your plan. If you switch to a plan with a
+        shorter history, history older than the new period is deleted within
+        a day. If a paid plan ends, the App keeps running on the Free plan
+        rather than deleting your data.
       </p>
       <ul>
         <li>
@@ -159,13 +167,19 @@ export function TidemarkPrivacyPolicy() {
           installed.
         </li>
         <li>
+          For each item, the App also keeps the version that was current at
+          the start of your retention period, so you can restore to any moment
+          within it.
+        </li>
+        <li>
           If an item is deleted from your store, its last backed-up version is
           kept until the deletion is older than your retention period.
         </li>
         <li>
-          Older versions, backup archives, alerts, and activity records are
-          deleted automatically each day once they pass your retention
-          period.
+          Older versions, backup archives, stock change logs, restore records,
+          alerts, and activity records are deleted automatically each day once
+          they pass your retention period, except the most recent nightly
+          backup archive, which is always kept.
         </li>
         <li>
           Stored images, files, and theme files that no remaining version uses
@@ -188,7 +202,7 @@ export function TidemarkPrivacyPolicy() {
         </li>
         <li>
           If Shopify reports your store as closed or frozen, its data is
-          erased after 90 days.
+          erased after 90 days, unless the store reopens before then.
         </li>
       </ul>
       <p>
