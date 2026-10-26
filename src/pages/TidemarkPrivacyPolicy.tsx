@@ -7,7 +7,7 @@ export function TidemarkPrivacyPolicy() {
       icon="/tidemark/tidemark-app-icon.svg"
       links={TIDEMARK_LINKS}
       title="Privacy Policy"
-      effectiveDate="October 25, 2026"
+      effectiveDate="October 26, 2026"
     >
       <p>
         This Privacy Policy describes how Kelp Software ("we", "us") collects,
@@ -16,36 +16,67 @@ export function TidemarkPrivacyPolicy() {
         installing the App, you agree to this policy.
       </p>
       <p>
-        The App exists to back up a store's catalog and restore it when
+        The App exists to back up a store's content and restore it when
         something goes wrong. We collect only what we need to do that.
       </p>
 
       <h2>Information we collect from Shopify</h2>
       <p>
         When you install the App, you grant it access to parts of your store
-        through the Shopify Admin API. The App reads your store's products,
-        collections, sales channel publications, files and media, inventory
-        item settings, and metaobjects. The App uses its write access only to
-        restore data that you ask it to restore.
+        through the Shopify Admin API. The App reads the store content listed
+        below. The App uses its write access only to restore data that you
+        ask it to restore.
       </p>
       <p>From that access, the App stores:</p>
       <ul>
         <li>
-          <strong>Product and collection data:</strong> titles, descriptions,
+          <strong>Products and collections:</strong> titles, descriptions,
           handles, variants, prices, SKUs, barcodes, inventory item settings
           (cost, weight, country of origin, HS code), tags, metafields, SEO
           fields, collection rules and memberships, and sales channel status.
         </li>
         <li>
-          <strong>Media:</strong> copies of product and collection images and
-          videos.
+          <strong>Stock levels:</strong> the quantity of each product variant
+          at each location, and a log of each change (the quantity before and
+          after, and when it changed).
+        </li>
+        <li>
+          <strong>Pages and blogs:</strong> pages, blogs, and blog posts,
+          including titles, HTML content, SEO fields, and featured images.
+        </li>
+        <li>
+          <strong>Files and media:</strong> copies of product and collection
+          images and videos, and of the images, videos, and documents in your
+          store's Files section.
+        </li>
+        <li>
+          <strong>Themes:</strong> every file of every theme in your store
+          (Liquid, JSON, CSS, JavaScript, and images).
+        </li>
+        <li>
+          <strong>Navigation and store settings:</strong> navigation menus,
+          URL redirects, and your store policies (refund, privacy, terms of
+          service, shipping, and contact).
+        </li>
+        <li>
+          <strong>Discounts:</strong> titles, codes, values, eligibility
+          rules, and usage limits. Where a discount is limited to specific
+          customers or customer segments, the App stores only their Shopify
+          IDs, not any customer details.
+        </li>
+        <li>
+          <strong>Custom data:</strong> metafield definitions, metaobject
+          definitions, and metaobject entries.
         </li>
         <li>
           <strong>Version history:</strong> each changed version of the items
           above, so you can see what changed and restore an earlier version.
         </li>
       </ul>
-      <p>The App does not back up stock quantities.</p>
+      <p>
+        You can download a copy of any backed-up theme version as a ZIP file.
+        Each download link is private and expires after one hour.
+      </p>
 
       <h2>Store and account information</h2>
       <ul>
@@ -71,7 +102,9 @@ export function TidemarkPrivacyPolicy() {
       <h2>Customer and order data</h2>
       <p>
         The App does not currently request access to, collect, or store your
-        customers' personal information or your orders. If we add customer
+        customers' personal information or your orders. Discount eligibility
+        rules may reference customers by Shopify ID only, as described above.
+        If we add customer
         or order backups in the future, we will update this policy before
         that feature is available and will handle that data in line with
         Shopify's protected customer data requirements.
@@ -85,6 +118,12 @@ export function TidemarkPrivacyPolicy() {
         for advertising, or use it for analytics or advertising.
       </p>
 
+      <h2>Billing</h2>
+      <p>
+        Paid plans are billed through Shopify. Shopify handles payment, and
+        the App never receives or stores your payment details.
+      </p>
+
       <h2>Service providers</h2>
       <p>
         We use the following providers to run the App. Each receives only
@@ -96,7 +135,7 @@ export function TidemarkPrivacyPolicy() {
         </li>
         <li>
           <strong>Amazon Web Services (S3)</strong>: stores backed-up images,
-          videos, and nightly backup archives.
+          videos, files, theme files, and nightly backup archives.
         </li>
         <li>
           <strong>Shopify</strong>: the platform the App runs on and the
@@ -111,8 +150,8 @@ export function TidemarkPrivacyPolicy() {
 
       <h2>Retention</h2>
       <p>
-        You choose how long the App keeps history: 30, 90, 180, 365 (the
-        default), or 730 days.
+        The App keeps history for the retention period shown in its
+        settings, which depends on your plan.
       </p>
       <ul>
         <li>
@@ -128,6 +167,11 @@ export function TidemarkPrivacyPolicy() {
           deleted automatically each day once they pass your retention
           period.
         </li>
+        <li>
+          Stored images, files, and theme files that no remaining version uses
+          are removed by a weekly cleanup, usually within about a week of no
+          longer being needed.
+        </li>
       </ul>
 
       <h2>Uninstalling and deletion</h2>
@@ -136,7 +180,7 @@ export function TidemarkPrivacyPolicy() {
         <li>
           Shopify notifies us 48 hours after you uninstall. When it does, we
           erase all data held for your store, including database records,
-          images, videos, and archives.
+          images, videos, files, theme files, and archives.
         </li>
         <li>
           As a safeguard, all of your store's data is erased no later than 30

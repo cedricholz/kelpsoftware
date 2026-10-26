@@ -10,8 +10,8 @@ export function TidemarkSupport() {
       title="Support"
     >
       <p>
-        Tidemark backs up your Shopify store's products, collections, and
-        media. Each change is saved within seconds of it happening, with a
+        Tidemark backs up your Shopify store's products, collections, pages,
+        themes, files, discounts, and more. Each change is saved within seconds of it happening, with a
         full backup every night, so you can restore anything that changes or
         goes missing.
       </p>
