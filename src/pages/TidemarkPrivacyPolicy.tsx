@@ -90,7 +90,10 @@ export function TidemarkPrivacyPolicy() {
         </li>
         <li>
           <strong>App settings:</strong> your nightly backup time, retention
-          period, alert threshold, and an optional alert email address.
+          period, alert threshold, whether the weekly summary email is on, and
+          the email address for alerts and summaries. That address starts as
+          your store's contact email; you can change it, or clear it to turn
+          email off.
         </li>
         <li>
           <strong>Activity records:</strong> the numeric Shopify staff user ID
@@ -121,6 +124,17 @@ export function TidemarkPrivacyPolicy() {
         for advertising, or use it for analytics or advertising.
       </p>
 
+      <h2>Emails</h2>
+      <p>
+        The App emails the address in its settings when many items change or
+        are deleted at once, and sends a weekly summary on Monday mornings.
+        Each email contains your store name, the owner's first name, counts of
+        changes by type, and links into the App. Emails never contain customer
+        information. You can unsubscribe from the weekly summary with the
+        one-click link in any summary email, and turn alerts off in the App's
+        settings.
+      </p>
+
       <h2>Billing</h2>
       <p>
         Paid plans are billed through Shopify. Shopify handles payment, and
@@ -139,8 +153,9 @@ export function TidemarkPrivacyPolicy() {
           <strong>Render</strong>: hosts the App and its database.
         </li>
         <li>
-          <strong>Amazon Web Services (S3)</strong>: stores backed-up images,
-          videos, files, theme files, and nightly backup archives.
+          <strong>Amazon Web Services (S3 and SES)</strong>: stores backed-up
+          images, videos, files, theme files, and nightly backup archives, and
+          sends the App's alert and weekly summary emails.
         </li>
         <li>
           <strong>Shopify</strong>: the platform the App runs on and the
