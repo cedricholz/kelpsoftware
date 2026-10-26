@@ -1,0 +1,113 @@
+KELP SOFTWARE
+Logo kit — start here
+
+RECOMMENDED DEFAULT
+
+Use svg/kelp-wordmark.svg as the main Kelp Software logo. It combines the custom
+kelp lettering with the smaller software descriptor. Use svg/kelp-k.svg wherever
+you need only the symbol, such as a profile image or a compact product badge.
+
+The matching K shape connects the wordmark and standalone symbol. All logo SVG
+artwork uses real filled vector paths with outlined lettering. There are no
+embedded raster images or required fonts.
+
+CHOOSE A LOGO
+
+svg/kelp-wordmark.svg
+  Recommended full logo for website headers, footers and general branding.
+
+svg/kelp-wordmark-compact.svg
+  The custom kelp lettering without software. Use it when the descriptor would
+  become too small or when the company name is already established in context.
+
+svg/kelp-horizontal.svg
+  The custom kelp wordmark with software to its right on one line. Use this
+  landscape arrangement in wider website headers and other horizontal spaces.
+
+svg/kelp-stacked.svg
+  The custom kelp wordmark with software centered beneath the entire word.
+  Use this two-line arrangement for centered compositions and taller spaces.
+
+svg/kelp-k.svg
+  Standalone K in a square viewBox, ready for compact branding placements.
+
+Each design also has -white.svg and -black.svg versions. The standalone K also
+has a -teal.svg version. Use the white version on dark backgrounds and the
+black version when a single black ink or neutral mark is appropriate. SVG
+backgrounds are transparent.
+
+FILE FORMATS AND FOLDERS
+
+svg/
+  Use these scalable vector files on websites and whenever a platform accepts
+  SVG. They remain crisp at different display sizes.
+
+png/
+  Transparent exports for platforms that require raster images. Wordmark,
+  compact and horizontal logos are supplied at 1200 and 2400 pixels wide;
+  stacked logos at 1200 pixels wide; square K symbols at 512 and 1024 pixels.
+  Choose a file large enough for the placement and reduce its displayed size
+  while preserving its proportions.
+
+web/
+  Browser favicons, Apple home-screen icon, general and maskable app icons,
+  optional site.webmanifest, head.html, and a website-specific README.txt.
+
+social/
+  kelp-og-1200x630.png and kelp-og-1200x630-dark.png are landscape link-preview
+  images with opaque backgrounds. kelp-avatar-green-1024.png and
+  kelp-avatar-light-1024.png are square profile images with opaque backgrounds.
+
+previews/
+  PNG and SVG overview sheets for comparing the supplied logo versions.
+
+source/
+  kelp-master.svg, glyph-paths.json, palette.json and brand.css are the editable
+  vector and color sources. Keep these with the kit for future exports.
+
+WEBSITE QUICK START
+
+1. Choose your logo from svg/ and place it in your site's public assets folder.
+   Set its displayed width as needed and keep its height proportional. Give a
+   meaningful logo image alt text such as "Kelp Software".
+
+2. Copy the favicon and icon image files in web/ to your site's public root.
+   Copy social/kelp-og-1200x630.png there too. The supplied example expects URLs
+   such as /favicon.svg and /kelp-og-1200x630.png.
+
+3. Add web/head.html to your HTML <head>, or use equivalent framework metadata.
+   Replace every https://example.com with your real public HTTPS origin and
+   set the canonical page URL and title for each page. Social-image URLs must
+   be publicly accessible.
+
+4. For an installed web-app experience, also copy web/site.webmanifest to the
+   public root. Review its id, start_url, scope, names and display mode before
+   publishing. A normal website can omit the manifest file and its link.
+
+Read web/README.txt for the individual icon uses and integration details.
+
+SPACING AND SIZE
+
+Leave clear space around the entire logo of at least half the width of the
+vertical stem of the l in the wordmark. Use the corresponding stem width in
+the standalone K as the reference for icon-only placements. This is a minimum;
+give the logo more room where the layout allows it.
+
+Keep the original aspect ratio. Use the compact wordmark or the standalone K
+when the small software descriptor stops being comfortably readable. Check
+the actual placement on both desktop and mobile rather than relying on one
+fixed minimum pixel size.
+
+The web and social icons already include padding for their intended contexts.
+Preserve the maskable icon's supplied padding and full-bleed background so
+operating-system masks can crop it correctly.
+
+COLOR PALETTE
+
+Primary green   #0B5145   Main logo and strong brand surfaces
+Teal            #008777   Standalone icon alternative and accents
+Mint            #B7E4D1   Light accents on dark green
+Paper           #F5F8F5   Soft light background
+
+These are digital RGB colors. source/palette.json contains the values and
+source/brand.css provides reusable CSS custom properties.

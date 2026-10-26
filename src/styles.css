@@ -1,10 +1,17 @@
 :root {
-  --bg: #0a1f1a;
-  --bg-soft: #0f2a23;
-  --fg: #e8f3ec;
-  --fg-muted: #9fb8a9;
-  --accent: #7fd1a8;
-  --border: #1c3a31;
+  /* Brand palette: brand/source/palette.json */
+  --kelp-green: #0b5145;
+  --kelp-teal: #008777;
+  --kelp-mint: #b7e4d1;
+  --kelp-paper: #f5f8f5;
+  --kelp-ink: #102b26;
+
+  --bg: var(--kelp-paper);
+  --bg-soft: #ffffff;
+  --fg: var(--kelp-ink);
+  --fg-muted: #4a6660;
+  --accent: var(--kelp-green);
+  --border: var(--kelp-mint);
   --max: 720px;
 }
 
@@ -65,6 +72,12 @@ header {
 }
 .brand:hover {
   text-decoration: none;
+}
+
+.brand-logo {
+  display: block;
+  height: 80px;
+  width: auto;
 }
 
 .hero h1 {
@@ -193,4 +206,23 @@ footer {
 
 .legal-footer-nav a {
   color: var(--accent);
+}
+
+.legal-footer-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legal-product {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 20px;
+}
+
+.legal-product img {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
 }

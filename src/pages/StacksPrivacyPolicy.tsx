@@ -1,8 +1,13 @@
-import { StacksLayout } from "./StacksLayout";
+import { AppLegalLayout, STACKS_LINKS } from "./AppLegalLayout";
 
 export function StacksPrivacyPolicy() {
   return (
-    <StacksLayout title="Privacy Policy" effectiveDate="April 25, 2026">
+    <AppLegalLayout
+      product="Stacks"
+      links={STACKS_LINKS}
+      title="Privacy Policy"
+      effectiveDate="April 25, 2026"
+    >
       <p>
         This Privacy Policy describes how Kelp Software ("we", "us") collects,
         uses, and shares information when you use Stacks (the "App"). By using
@@ -131,6 +136,6 @@ export function StacksPrivacyPolicy() {
         Questions or requests? Email{" "}
         <a href="mailto:dev@kelpsoftware.com">dev@kelpsoftware.com</a>.
       </p>
-    </StacksLayout>
+    </AppLegalLayout>
   );
 }

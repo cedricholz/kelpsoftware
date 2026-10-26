@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { KelpMark } from "../KelpMark";
+import { KelpLogo } from "../KelpLogo";
 
 export function Home() {
   const year = new Date().getFullYear();
@@ -8,8 +8,7 @@ export function Home() {
     <main>
       <header>
         <Link className="brand" to="/">
-          <KelpMark />
-          <span>Kelp Software</span>
+          <KelpLogo />
         </Link>
       </header>
 

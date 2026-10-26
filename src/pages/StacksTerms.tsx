@@ -1,8 +1,13 @@
-import { StacksLayout } from "./StacksLayout";
+import { AppLegalLayout, STACKS_LINKS } from "./AppLegalLayout";
 
 export function StacksTerms() {
   return (
-    <StacksLayout title="Terms of Service" effectiveDate="April 25, 2026">
+    <AppLegalLayout
+      product="Stacks"
+      links={STACKS_LINKS}
+      title="Terms of Service"
+      effectiveDate="April 25, 2026"
+    >
       <p>
         These Terms of Service ("Terms") govern your use of Stacks (the
         "App"), provided by Kelp Software ("we", "us"). By creating an
@@ -211,6 +216,6 @@ export function StacksTerms() {
         Questions, copyright notices, or legal requests:{" "}
         <a href="mailto:dev@kelpsoftware.com">dev@kelpsoftware.com</a>.
       </p>
-    </StacksLayout>
+    </AppLegalLayout>
   );
 }

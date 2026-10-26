@@ -1,0 +1,61 @@
+TIDEMARK - BACKUP & RESTORE
+Curling-wave logo assets
+
+SELECTED DESIGN
+
+This package contains concept 01, the curling wave. The vector artwork follows
+the selected silhouette, including its return-arrow crest and teal lower wave.
+The slight color variation in the generated concept has been replaced with
+flat Kelp Software brand colors for consistent exports.
+
+QUICK PICKS
+
+svg/tidemark-app-icon.svg
+  Primary square app icon: mint wave and teal accent on deep green.
+
+png/app-icon/tidemark-app-icon-1024.png
+  Primary 1024 x 1024 PNG, with an opaque background and no alpha channel.
+
+svg/tidemark-symbol.svg
+  Original mint-and-teal symbol on a transparent square canvas, for dark surfaces.
+
+svg/tidemark-symbol-green.svg
+  Green-and-teal symbol on a transparent square canvas, for light surfaces.
+
+svg/tidemark-symbol-white.svg
+  White symbol on a transparent square canvas, for monochrome placements.
+
+svg/tidemark-app-icon-light.svg
+  Green-and-teal app icon on a soft off-white background.
+
+PNG EXPORTS
+
+png/app-icon/
+  Primary opaque square icon at 32, 48, 64, 128, 180, 192, 256, 512, 1024,
+  and 2048 pixels. Filenames include their square pixel size.
+
+png/transparent/
+  Transparent original-color and green symbols at 512, 1024 and 2048 pixels.
+  White symbols at 512 and 1024 pixels. These files retain alpha transparency.
+
+png/light/
+  Opaque light-background app icons at 512 and 1024 pixels.
+
+SOURCE AND REFERENCE
+
+source/tidemark-wave-master.svg is the editable full-color vector master.
+source/wave-paths.json contains the two editable outline paths.
+source/palette.json contains the flat digital RGB color values.
+reference/selected-concept.png is the original generated image for reference.
+
+All logo SVGs use vector paths. They contain no embedded bitmap or font assets.
+The symbol exports retain the same square canvas and padding as the app icon.
+Keep their proportions when resizing. The opaque app-icon exports extend the
+background to all four edges and leave corner shaping to the platform.
+
+COLORS
+
+Deep green:  #0B5145
+Teal:        #008777
+Seafoam:     #B7E4D1
+Off-white:   #F5F8F5
