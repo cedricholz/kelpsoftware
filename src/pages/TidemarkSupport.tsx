@@ -12,11 +12,12 @@ export function TidemarkSupport() {
     >
       <p>
         Tidemark backs up your Shopify store's products, collections, pages,
-        themes, files, discounts, and more. Each change is saved within seconds of it happening, with a
-        full backup every night, so you can restore anything that changes or
-        goes missing. Themes get a history of every change to every file. You
-        can also download any nightly backup or your products as a
-        spreadsheet.
+        themes, files, discounts, and more. Most changes are saved within
+        seconds and the rest within 30 minutes, with a full backup every
+        night, so you can restore products, collections, pages and more when
+        they change or go missing. Themes get a history of every change to
+        every file. You can also download any nightly backup or your products
+        as a spreadsheet.
       </p>
 
       <h2>Help articles</h2>

@@ -40,9 +40,9 @@ export function TidemarkLanding() {
         <section className="tm-feature">
           <h2>Undo a bad import or AI edit in one step</h2>
           <p>
-            The time machine rolls back everything that changed in a window of
-            time. Stock comes back by the difference, so sales made since are
-            kept.
+            The time machine rolls back the products, collections, discounts
+            and content that changed in a window of time. Stock comes back by
+            the difference, so sales made since are kept.
           </p>
         </section>
         <section className="tm-feature">

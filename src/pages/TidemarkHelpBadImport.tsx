@@ -96,9 +96,9 @@ export function TidemarkHelpBadImport() {
       <p>
         Tidemark saves every change to your products within seconds, so it
         knows exactly what the import or bulk edit changed. Open the time
-        machine, pick the window when it happened and undo everything that
-        changed in it. Stock comes back by the difference, so sales made since
-        are kept.
+        machine, pick the window when it happened and roll back the products
+        that changed in it. Stock comes back by the difference, so sales made
+        since are kept.
       </p>
       <p>
         If only one thing broke, restore just that part, such as prices, and
