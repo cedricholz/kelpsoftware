@@ -73,10 +73,9 @@ export function TidemarkPrivacyPolicy() {
         </li>
       </ul>
       <p>
-        You can download a nightly backup archive, a products spreadsheet
-        (CSV), or any backed-up theme version as a ZIP file. Download links
-        are private and expire after one hour, and the spreadsheets and ZIP
-        files made for a download are deleted within two days. Image links
+        You can download a nightly backup archive or a products spreadsheet
+        (CSV). Download links are private and expire after one hour, and the
+        spreadsheets made for a download are deleted within two days. Image links
         inside a products spreadsheet last 7 days so Shopify can import the
         images.
       </p>
