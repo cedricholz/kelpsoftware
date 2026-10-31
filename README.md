@@ -9,7 +9,7 @@ and support pages for Kelp's apps.
 npm install
 npm run dev      # http://localhost:5173
 npm run build    # outputs to dist/
-npm run preview  # serve the built dist/ locally
+npm run preview  # serve the built dist/ locally (as a single-page app, not the way CloudFront serves it)
 ```
 
 ## Pages
@@ -25,6 +25,13 @@ npm run preview  # serve the built dist/ locally
 App pages share `src/pages/AppLegalLayout.tsx`. The Tidemark URLs are linked
 from the Shopify App Store listing, so keep them stable. Shopify warns apps
 whose privacy link goes dead.
+
+To add a page, add its route in `src/App.tsx` and its title and description in
+`src/site.ts`. The build (`scripts/prerender.mjs`) renders every page in
+`src/site.ts` into its own HTML file, so search engines and link previews see
+each page's text, title, description and canonical address without running
+JavaScript. It also writes `404.html` and `sitemap.xml`; `robots.txt` lives in
+`public/`.
 
 ## Brand assets
 
@@ -62,9 +69,11 @@ request, so replacing them takes effect on the next deploy.
 | Domains                 | kelpsoftware.com, www.kelpsoftware.com  |
 
 `infra/site.yml` describes the bucket and distribution: a private bucket that
-only CloudFront can read (Origin Access Control). Unknown paths return
-`index.html`, so client-side routes like `/tidemark/privacy` work on a direct
-load.
+only CloudFront can read (Origin Access Control). A CloudFront Function serves
+each page address from its `index.html` (`/tidemark/privacy` from
+`tidemark/privacy/index.html`), and any address without a file gets `404.html`
+with a 404 status. The deploy role can't change the distribution, so changes to
+`infra/site.yml` are applied by hand as a CloudFormation stack update.
 
 ### Manual deploy (fallback)
 

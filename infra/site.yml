@@ -47,6 +47,28 @@ Resources:
         SigningBehavior: always
         SigningProtocol: sigv4
 
+  # Each page is built as <path>/index.html (scripts/prerender.mjs), so /tidemark/support is
+  # served from tidemark/support/index.html. Files with an extension are served as they are.
+  PageFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: !Sub "${BucketName}-pages"
+      AutoPublish: true
+      FunctionConfig:
+        Comment: Serves each page address from its index.html
+        Runtime: cloudfront-js-2.0
+      FunctionCode: |
+        function handler(event) {
+          var request = event.request;
+          var uri = request.uri;
+          if (uri.charAt(uri.length - 1) === "/") {
+            request.uri = uri + "index.html";
+          } else if (uri.slice(uri.lastIndexOf("/") + 1).indexOf(".") === -1) {
+            request.uri = uri + "/index.html";
+          }
+          return request;
+        }
+
   Distribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -69,13 +91,18 @@ Resources:
           Compress: true
           # AWS managed CachingOptimized policy
           CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !GetAtt PageFunction.FunctionMetadata.FunctionARN
+        # The bucket answers 403 for a key that doesn't exist (CloudFront can't list it).
+        # Either way the visitor gets the 404 page with a real 404 status.
         CustomErrorResponses:
           - ErrorCode: 403
-            ResponseCode: 200
-            ResponsePagePath: /index.html
+            ResponseCode: 404
+            ResponsePagePath: /404.html
           - ErrorCode: 404
-            ResponseCode: 200
-            ResponsePagePath: /index.html
+            ResponseCode: 404
+            ResponsePagePath: /404.html
         Aliases: !If
           - HasCustomDomain
           - - !Ref DomainName
