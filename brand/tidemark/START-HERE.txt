@@ -16,6 +16,9 @@ svg/tidemark-app-icon.svg
 png/app-icon/tidemark-app-icon-1024.png
   Primary 1024 x 1024 PNG, with an opaque background and no alpha channel.
 
+png/app-icon/tidemark-app-icon-1200.png
+  The same icon at 1200 x 1200, the size the Shopify App Store listing requires.
+
 svg/tidemark-symbol.svg
   Original mint-and-teal symbol on a transparent square canvas, for dark surfaces.
 
@@ -32,7 +35,7 @@ PNG EXPORTS
 
 png/app-icon/
   Primary opaque square icon at 32, 48, 64, 128, 180, 192, 256, 512, 1024,
-  and 2048 pixels. Filenames include their square pixel size.
+  1200 and 2048 pixels. Filenames include their square pixel size.
 
 png/transparent/
   Transparent original-color and green symbols at 512, 1024 and 2048 pixels.
