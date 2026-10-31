@@ -13,6 +13,12 @@ export const PAGES: PageMeta[] = [
     description: "Kelp Software is an independent studio building small, useful software.",
   },
   {
+    path: "/tidemark",
+    title: "Tidemark: undo bad edits in your Shopify store",
+    description:
+      "Tidemark saves every change to your Shopify products, collections and themes within seconds, so you can undo a bad import or restore a deleted product.",
+  },
+  {
     path: "/tidemark/privacy",
     title: "Tidemark privacy policy | Kelp Software",
     description:
@@ -23,6 +29,24 @@ export const PAGES: PageMeta[] = [
     title: "Tidemark support | Kelp Software",
     description:
       "Get help with Tidemark: Backup & Restore for Shopify, or ask what data it holds for your store and have it deleted.",
+  },
+  {
+    path: "/tidemark/help/restore-deleted-product",
+    title: "How to restore a deleted product in Shopify | Kelp Software",
+    description:
+      "Shopify can't restore a deleted product. How to rebuild one from an export or past orders, how to avoid it next time, and how Tidemark brings it back.",
+  },
+  {
+    path: "/tidemark/help/undo-bulk-edit-or-csv-import",
+    title: "How to undo a bad bulk edit or CSV import in Shopify | Kelp Software",
+    description:
+      "Shopify can't roll back a bulk edit or product import. How to stop the damage, fix it from an earlier export, and undo it in one step with Tidemark.",
+  },
+  {
+    path: "/tidemark/help/theme-version-history",
+    title: "How to see what changed in a Shopify theme | Kelp Software",
+    description:
+      "What Shopify's theme Timeline can and can't show you, how to protect a theme before editing, and how Tidemark keeps every version of every theme file.",
   },
   {
     path: "/stacks/privacy-policy",

@@ -180,7 +180,8 @@ footer {
   margin: 0 0 14px;
 }
 
-.legal article ul {
+.legal article ul,
+.legal article ol {
   padding-left: 20px;
   margin: 0 0 18px;
 }
@@ -225,4 +226,104 @@ footer {
   width: 56px;
   height: 56px;
   border-radius: 14px;
+}
+
+/* ===== Tidemark landing page and help articles ===== */
+
+.tm-landing article {
+  max-width: none;
+}
+
+.tm-landing article > p,
+.tm-landing article > h3 {
+  max-width: 64ch;
+}
+
+.tm-landing article h1 {
+  font-size: clamp(30px, 6vw, 44px);
+  line-height: 1.12;
+  margin: 0 0 16px;
+}
+
+.legal article .tm-lead {
+  font-size: 18px;
+  color: var(--fg-muted);
+  max-width: 56ch;
+  margin-bottom: 24px;
+}
+
+.tm-cta {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tm-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 40px 0 16px;
+}
+
+.tm-feature {
+  padding: 20px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.legal article .tm-feature h2 {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.legal article .tm-feature p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--fg-muted);
+}
+
+.tm-landing article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 4px;
+}
+
+.legal article .tm-help-list {
+  list-style: none;
+  padding: 0;
+}
+
+.legal article .tm-help-list li {
+  margin-bottom: 14px;
+}
+
+.tm-help-list a {
+  font-weight: 600;
+}
+
+.tm-help-list span {
+  display: block;
+  color: var(--fg-muted);
+  font-size: 15px;
+}
+
+.legal article .tm-note {
+  margin: 32px 0 0;
+  padding: 16px 20px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .tm-features {
+    grid-template-columns: 1fr;
+  }
 }

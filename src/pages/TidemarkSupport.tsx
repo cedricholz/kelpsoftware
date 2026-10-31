@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { AppLegalLayout, TIDEMARK_LINKS } from "./AppLegalLayout";
+import { TidemarkHelpList } from "./TidemarkHelp";
 
 export function TidemarkSupport() {
   return (
@@ -17,6 +18,9 @@ export function TidemarkSupport() {
         can also download any nightly backup or your products as a
         spreadsheet.
       </p>
+
+      <h2>Help articles</h2>
+      <TidemarkHelpList />
 
       <h2>Get help</h2>
       <p>

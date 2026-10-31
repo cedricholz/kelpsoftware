@@ -11,6 +11,7 @@ export const STACKS_LINKS: LegalLink[] = [
 ];
 
 export const TIDEMARK_LINKS: LegalLink[] = [
+  { to: "/tidemark", label: "Tidemark" },
   { to: "/tidemark/privacy", label: "Privacy Policy" },
   { to: "/tidemark/support", label: "Support" },
   { to: "mailto:support@kelpsoftware.com", label: "Contact" },
@@ -22,6 +23,7 @@ export function AppLegalLayout({
   links,
   title,
   effectiveDate,
+  className,
   children,
 }: {
   product: string;
@@ -29,12 +31,13 @@ export function AppLegalLayout({
   links: LegalLink[];
   title: string;
   effectiveDate?: string;
+  className?: string;
   children: ReactNode;
 }) {
   const year = new Date().getFullYear();
 
   return (
-    <main className="legal">
+    <main className={className ? `legal ${className}` : "legal"}>
       <header>
         <Link className="brand" to="/">
           <KelpLogo />
