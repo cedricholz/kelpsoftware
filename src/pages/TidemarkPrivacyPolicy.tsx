@@ -211,11 +211,14 @@ export function TidemarkPrivacyPolicy() {
         <li>
           Shopify notifies us 48 hours after you uninstall. When it does, we
           erase all data held for your store, including database records,
-          images, videos, files, theme files, and archives.
+          images, videos, files, theme files, and archives. If you've
+          installed the App again by then, we keep your data so your history
+          carries on.
         </li>
         <li>
-          As a safeguard, all of your store's data is erased no later than 30
-          days after uninstall, even if that notice never arrives.
+          As a safeguard, if the App stays uninstalled, all of your store's
+          data is erased no later than 30 days after uninstall, even if that
+          notice never arrives.
         </li>
         <li>
           If Shopify reports your store as closed or frozen, its data is
@@ -243,7 +246,8 @@ export function TidemarkPrivacyPolicy() {
         request to us. Today the App holds no customer data, so there is
         nothing to return or delete. If that changes, we will provide or
         delete the requested data within 30 days. When Shopify asks us to
-        erase a store's data, we erase everything we hold for that store.
+        erase a store's data, we erase everything we hold for that store,
+        unless the store has installed the App again by then.
       </p>
 
       <h2>Security</h2>
