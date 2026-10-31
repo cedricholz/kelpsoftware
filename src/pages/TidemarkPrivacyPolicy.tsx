@@ -7,7 +7,7 @@ export function TidemarkPrivacyPolicy() {
       icon="/tidemark/tidemark-app-icon.svg"
       links={TIDEMARK_LINKS}
       title="Privacy Policy"
-      effectiveDate="October 26, 2026"
+      effectiveDate="October 31, 2026"
     >
       <p>
         This Privacy Policy describes how Kelp Software ("we", "us") collects,
@@ -128,9 +128,12 @@ export function TidemarkPrivacyPolicy() {
       <p>
         The App emails the address in its settings when many items change or
         are deleted at once, and sends a weekly summary on Monday mornings.
-        Each email contains your store name, the owner's first name, counts of
-        changes by type, and links into the App. Emails never contain customer
-        information. You can unsubscribe from the weekly summary with the
+        Once, about two weeks after install, it also sends a short email
+        asking how the App is working, with a link to review it on the Shopify
+        App Store. That email goes only while the weekly summary is on, and
+        never again. Each email contains your store name, the owner's first
+        name, counts of changes, and links into the App or to the Shopify App
+        Store. Emails never contain customer information. You can unsubscribe from the weekly summary with the
         one-click link in any summary email, and turn alerts off in the App's
         settings.
       </p>
@@ -155,7 +158,7 @@ export function TidemarkPrivacyPolicy() {
         <li>
           <strong>Amazon Web Services (S3 and SES)</strong>: stores backed-up
           images, videos, files, theme files, and nightly backup archives, and
-          sends the App's alert and weekly summary emails.
+          sends the App's alert, weekly summary and review request emails.
         </li>
         <li>
           <strong>Shopify</strong>: the platform the App runs on and the
