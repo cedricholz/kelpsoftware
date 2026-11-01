@@ -136,6 +136,14 @@ export function TidemarkPrivacyPolicy() {
         one-click link in any summary email, and turn alerts off in the App's
         settings.
       </p>
+      <p>
+        Kelp Software also receives a daily operations report by email. When
+        a backup or restore fails or stalls, backups stop, or a store installs
+        or uninstalls the App, the report names the store (its name and
+        myshopify.com address) along with any error message, which can name
+        the items involved. It never contains customer information, and we
+        delete each report 30 days after it's sent.
+      </p>
 
       <h2>Billing</h2>
       <p>
@@ -157,7 +165,12 @@ export function TidemarkPrivacyPolicy() {
         <li>
           <strong>Amazon Web Services (S3 and SES)</strong>: stores backed-up
           images, videos, files, theme files, and nightly backup archives, and
-          sends the App's alert, weekly summary and review request emails.
+          sends the App's alert, weekly summary and review request emails and
+          Kelp Software's daily operations report.
+        </li>
+        <li>
+          <strong>Google Workspace</strong>: hosts Kelp Software's email,
+          including support requests and the daily operations report.
         </li>
         <li>
           <strong>Shopify</strong>: the platform the App runs on and the
@@ -202,6 +215,10 @@ export function TidemarkPrivacyPolicy() {
           Stored images, files, and theme files that no remaining version uses
           are removed by a weekly cleanup, usually within about a week of no
           longer being needed.
+        </li>
+        <li>
+          Daily operations reports, which can name your store, are deleted
+          from our email 30 days after they're sent.
         </li>
       </ul>
 
