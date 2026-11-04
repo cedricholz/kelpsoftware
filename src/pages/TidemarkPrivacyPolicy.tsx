@@ -7,7 +7,7 @@ export function TidemarkPrivacyPolicy() {
       icon="/tidemark/tidemark-app-icon.svg"
       links={TIDEMARK_LINKS}
       title="Privacy Policy"
-      effectiveDate="October 31, 2026"
+      effectiveDate="November 4, 2026"
     >
       <p>
         This Privacy Policy describes how Kelp Software ("we", "us") collects,
@@ -60,12 +60,29 @@ export function TidemarkPrivacyPolicy() {
         </li>
         <li>
           <strong>Discounts:</strong> titles, codes, values, eligibility
-          rules, and usage limits. The App does not capture which customers
-          or customer segments a discount is limited to.
+          rules, and usage limits. If your store gives the App access to its
+          customers, this includes which customers or customer segments a
+          discount is limited to, recorded by their Shopify IDs.
         </li>
         <li>
           <strong>Custom data:</strong> metafield definitions, metaobject
           definitions, and metaobject entries.
+        </li>
+        <li>
+          <strong>Customers:</strong> if your store gives the App access to
+          its customers, each customer's name, email address, phone number,
+          addresses, language, note, tags, tax exemptions, and metafields;
+          their email and SMS marketing status and data sale opt-out; and the
+          account's creation and update dates, state, whether its email is
+          verified, its number of orders, and the total it has spent.
+        </li>
+        <li>
+          <strong>Orders:</strong> if your store gives the App access to its
+          orders, each order's number, email address and phone number,
+          customer, shipping and billing addresses, note, tags, PO number,
+          custom attributes, line items, shipping lines, discount codes,
+          totals, payment and fulfillment status, tracking details, and
+          metafields.
         </li>
         <li>
           <strong>Version history:</strong> each changed version of the items
@@ -108,19 +125,36 @@ export function TidemarkPrivacyPolicy() {
 
       <h2>Customer and order data</h2>
       <p>
-        The App does not currently request access to, collect, or store your
-        customers' personal information or your orders. If we add customer
-        or order backups in the future, we will update this policy before
-        that feature is available and will handle that data in line with
-        Shopify's protected customer data requirements.
+        The App backs up customers and orders only once your store has given
+        it access to them, and handles that data in line with Shopify's
+        protected customer data requirements.
       </p>
+      <ul>
+        <li>
+          Customer and order data is kept only in the App's database. It is
+          never included in the nightly backup archives, emails, or Kelp
+          Software's daily operations report.
+        </li>
+        <li>
+          Restoring a customer or an order puts back the details you choose
+          from an earlier version. It never changes a customer's marketing
+          consent or data sale opt-out, which only the customer can change.
+        </li>
+        <li>
+          We look at a customer's data only to answer a privacy request or to
+          fix a fault. Access to the systems that hold it is limited to Kelp
+          Software staff who need it, and is logged.
+        </li>
+      </ul>
 
       <h2>How we use information</h2>
       <p>
         We use the information above only to provide the App: to take and
         keep backups, show you your backup history and alerts, and restore
-        data when you ask. We do not sell or rent your information, share it
-        for advertising, or use it for analytics or advertising.
+        data when you ask. The App never contacts your customers, and their
+        data is used only for your backups and restores. We do not sell or
+        rent your information, share it for advertising, or use it for
+        analytics or advertising.
       </p>
 
       <h2>Emails</h2>
@@ -160,7 +194,8 @@ export function TidemarkPrivacyPolicy() {
       </p>
       <ul>
         <li>
-          <strong>Render</strong>: hosts the App and its database.
+          <strong>Render</strong>: hosts the App and its database, which holds
+          any customer and order data.
         </li>
         <li>
           <strong>Amazon Web Services (S3 and SES)</strong>: stores backed-up
@@ -220,6 +255,11 @@ export function TidemarkPrivacyPolicy() {
           Daily operations reports, which can name your store, are deleted
           from our email 30 days after they're sent.
         </li>
+        <li>
+          Customers and orders follow the same rules, and a customer's data is
+          erased sooner whenever Shopify asks us to (see Your rights and
+          requests).
+        </li>
       </ul>
 
       <h2>Uninstalling and deletion</h2>
@@ -258,21 +298,26 @@ export function TidemarkPrivacyPolicy() {
         We respond within 30 days.
       </p>
       <p>
-        We also respond to Shopify's privacy requests. If your customer asks
-        you for their data, or asks you to delete it, Shopify forwards the
-        request to us. Today the App holds no customer data, so there is
-        nothing to return or delete. If that changes, we will provide or
-        delete the requested data within 30 days. When Shopify asks us to
-        erase a store's data, we erase everything we hold for that store,
-        unless the store has installed the App again by then.
+        We also respond to Shopify's privacy requests. If one of your
+        customers asks you for their data, Shopify forwards the request to
+        us, and within 30 days we send you everything the App holds about
+        that customer. If a customer asks to be deleted, we erase them, the
+        orders Shopify names in the request, and their other orders from your
+        backups as soon as the request arrives, and remove their ID from your
+        discount records. When Shopify asks us to erase a store's data, we
+        erase everything we hold for that store, unless the store has
+        installed the App again by then.
       </p>
 
       <h2>Security</h2>
       <p>
         All traffic between Shopify, the App, and our providers is encrypted
-        in transit using HTTPS/TLS. Backed-up files stored in Amazon S3 are
-        encrypted at rest. No system is perfectly secure, but we take
-        reasonable steps to protect your information.
+        in transit using HTTPS/TLS. The App's database and its backups are
+        encrypted at rest with AES-256, and so are backed-up files stored in
+        Amazon S3. Access to the App's systems is limited to Kelp Software
+        staff who need it, uses strong passwords and two-step sign-in, and is
+        logged. No system is perfectly secure, but we take reasonable steps to
+        protect your information.
       </p>
 
       <h2>Changes to this policy</h2>
