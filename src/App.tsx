@@ -5,6 +5,7 @@ import { NotFound } from "./pages/NotFound";
 import { StacksPrivacyPolicy } from "./pages/StacksPrivacyPolicy";
 import { StacksTerms } from "./pages/StacksTerms";
 import { TidemarkHelpBadImport } from "./pages/TidemarkHelpBadImport";
+import { TidemarkHelpCopyStore } from "./pages/TidemarkHelpCopyStore";
 import { TidemarkHelpDeletedProduct } from "./pages/TidemarkHelpDeletedProduct";
 import { TidemarkHelpThemeHistory } from "./pages/TidemarkHelpThemeHistory";
 import { TidemarkLanding } from "./pages/TidemarkLanding";
@@ -37,6 +38,7 @@ export function App() {
       <Route path="/tidemark/help/restore-deleted-product" element={<TidemarkHelpDeletedProduct />} />
       <Route path="/tidemark/help/undo-bulk-edit-or-csv-import" element={<TidemarkHelpBadImport />} />
       <Route path="/tidemark/help/theme-version-history" element={<TidemarkHelpThemeHistory />} />
+      <Route path="/tidemark/help/copy-to-another-store" element={<TidemarkHelpCopyStore />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -15,6 +15,8 @@ export function TidemarkLanding() {
         Tidemark saves every change to your products, collections, discounts
         and content. When an import, an app, an AI tool or a teammate gets
         something wrong, put back the whole item or only the field that broke.
+        You can also download your data, or copy it into a staging or second
+        store.
       </p>
       <p>
         <span className="tm-cta">Coming soon to the Shopify App Store</span>
@@ -78,6 +80,14 @@ export function TidemarkLanding() {
           <p>
             Tidemark saves the live state before every restore, so any restore
             can be reversed.
+          </p>
+        </section>
+        <section className="tm-feature">
+          <h2>Copy into a staging or second store</h2>
+          <p>
+            Link another store that uses Tidemark, then copy products,
+            collections, pages, menus, discounts and more into it. A copy never
+            overwrites what's already there, and you can undo it.
           </p>
         </section>
       </div>

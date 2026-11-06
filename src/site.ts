@@ -49,6 +49,12 @@ export const PAGES: PageMeta[] = [
       "What Shopify's theme Timeline can and can't show you, how to protect a theme before editing, and how Tidemark keeps every version of every theme file.",
   },
   {
+    path: "/tidemark/help/copy-to-another-store",
+    title: "How to copy products and content to another Shopify store | Kelp Software",
+    description:
+      "Shopify's own ways to copy products, collections and pages between stores, and how Tidemark copies them for you without overwriting what's already there.",
+  },
+  {
     path: "/stacks/privacy-policy",
     title: "Stacks privacy policy | Kelp Software",
     description:

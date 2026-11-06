@@ -16,6 +16,11 @@ const ARTICLES = [
     title: "How to see what changed in a Shopify theme",
     summary: "What Shopify's Timeline shows, where it stops, and how to see every change.",
   },
+  {
+    to: "/tidemark/help/copy-to-another-store",
+    title: "How to copy products and content to another Shopify store",
+    summary: "Link two stores, then copy products, pages and more without overwriting what's there.",
+  },
 ];
 
 /** Tidemark's help articles, listed on the Tidemark and support pages. */

@@ -277,6 +277,11 @@ footer {
   border-radius: 12px;
 }
 
+/* An odd card out at the end spans the row instead of leaving a gap. */
+.tm-feature:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .legal article .tm-feature h2 {
   font-size: 16px;
   margin: 0 0 6px;
