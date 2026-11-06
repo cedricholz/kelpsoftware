@@ -7,7 +7,7 @@ export function TidemarkPrivacyPolicy() {
       icon="/tidemark/tidemark-app-icon.svg"
       links={TIDEMARK_LINKS}
       title="Privacy Policy"
-      effectiveDate="November 4, 2026"
+      effectiveDate="November 5, 2026"
     >
       <p>
         This Privacy Policy describes how Kelp Software ("we", "us") collects,
@@ -25,7 +25,8 @@ export function TidemarkPrivacyPolicy() {
         When you install the App, you grant it access to parts of your store
         through the Shopify Admin API. The App reads the store content listed
         below. The App uses its write access only to restore data that you
-        ask it to restore.
+        ask it to restore, and to copy items into another store you've linked
+        when you ask it to (see Copying to another store).
       </p>
       <p>From that access, the App stores:</p>
       <ul>
@@ -147,11 +148,49 @@ export function TidemarkPrivacyPolicy() {
         </li>
       </ul>
 
+      <h2>Copying to another store</h2>
+      <p>
+        If another store, such as a staging store, also uses the App, you can
+        copy items from one into the other. Both stores have to agree: staff
+        in the store receiving the copies create a link code that works once
+        and expires after 30 minutes, and staff in the other store enter it.
+        Either store can remove the link at any time, and copies already made
+        stay where they are.
+      </p>
+      <ul>
+        <li>
+          When you copy, the App writes the items you pick from this store's
+          backups into the linked store, using that store's own access:
+          products, collections, pages, blogs and posts, navigation menus, URL
+          redirects, files, metafield and metaobject definitions, metaobject
+          entries, and discounts.
+        </li>
+        <li>
+          Copies never include customers, orders, or any other customer
+          information. Items the other store already has are skipped, not
+          overwritten, though copies can link to them: a copied product can
+          join one of that store's collections, for example.
+        </li>
+        <li>
+          Each store's activity records show the link, the other store's
+          myshopify.com address, and the Shopify staff user ID of the person who
+          created or entered the code, or removed the link. The App also keeps the
+          Shopify IDs of the items it copied and of their copies, so later
+          copies can skip them and you can undo a copy. Undoing a copy deletes
+          only what it added and nobody has changed since.
+        </li>
+        <li>
+          The link and these records are erased along with either store's
+          data (see Uninstalling and deletion).
+        </li>
+      </ul>
+
       <h2>How we use information</h2>
       <p>
         We use the information above only to provide the App: to take and
-        keep backups, show you your backup history and alerts, and restore
-        data when you ask. The App never contacts your customers, and their
+        keep backups, show you your backup history and alerts, restore data
+        when you ask, and copy items into a store you've linked when you ask.
+        The App never contacts your customers, and their
         data is used only for your backups and restores. We do not sell or
         rent your information, share it for advertising, or use it for
         analytics or advertising.
