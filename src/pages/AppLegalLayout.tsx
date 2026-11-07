@@ -17,6 +17,10 @@ export const TIDEMARK_LINKS: LegalLink[] = [
   { to: "mailto:support@kelpsoftware.com", label: "Contact" },
 ];
 
+/** Tidemark's Shopify App Store listing, where merchants install it. */
+export const TIDEMARK_APP_STORE_URL =
+  "https://apps.shopify.com/tidemark-backup-restore";
+
 export function AppLegalLayout({
   product,
   icon,

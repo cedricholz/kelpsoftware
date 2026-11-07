@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { AppLegalLayout, TIDEMARK_LINKS } from "./AppLegalLayout";
+import {
+  AppLegalLayout,
+  TIDEMARK_APP_STORE_URL,
+  TIDEMARK_LINKS,
+} from "./AppLegalLayout";
 import { TidemarkHelpList } from "./TidemarkHelp";
 
 export function TidemarkLanding() {
@@ -19,7 +23,9 @@ export function TidemarkLanding() {
         store.
       </p>
       <p>
-        <span className="tm-cta">Coming soon to the Shopify App Store</span>
+        <a className="tm-cta" href={TIDEMARK_APP_STORE_URL}>
+          Install free on the Shopify App Store
+        </a>
       </p>
 
       <div className="tm-features">

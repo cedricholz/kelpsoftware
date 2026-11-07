@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { AppLegalLayout, TIDEMARK_LINKS } from "./AppLegalLayout";
+import {
+  AppLegalLayout,
+  TIDEMARK_APP_STORE_URL,
+  TIDEMARK_LINKS,
+} from "./AppLegalLayout";
 
 export function TidemarkHelpDeletedProduct() {
   return (
@@ -78,8 +82,9 @@ export function TidemarkHelpDeletedProduct() {
         bin for the length of history your plan keeps.
       </p>
       <p className="tm-note">
-        Tidemark is coming soon to the Shopify App Store.{" "}
-        <Link to="/tidemark">See what else it can undo</Link>.
+        Tidemark is on the Shopify App Store.{" "}
+        <a href={TIDEMARK_APP_STORE_URL}>Install it free</a> or{" "}
+        <Link to="/tidemark">see what else it can undo</Link>.
       </p>
     </AppLegalLayout>
   );

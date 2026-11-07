@@ -254,13 +254,22 @@ footer {
 
 .tm-cta {
   display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid var(--border);
+  padding: 12px 22px;
   border-radius: 999px;
-  background: var(--bg-soft);
-  color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
   font-size: 15px;
   font-weight: 600;
+}
+
+.tm-cta:hover {
+  background: var(--kelp-ink);
+  text-decoration: none;
+}
+
+.tm-cta:focus-visible {
+  outline: 2px solid var(--kelp-teal);
+  outline-offset: 3px;
 }
 
 .tm-features {
