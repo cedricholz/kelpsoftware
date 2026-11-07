@@ -7,7 +7,7 @@ export function TidemarkPrivacyPolicy() {
       icon="/tidemark/tidemark-app-icon.svg"
       links={TIDEMARK_LINKS}
       title="Privacy Policy"
-      effectiveDate="November 5, 2026"
+      effectiveDate="November 6, 2026"
     >
       <p>
         This Privacy Policy describes how Kelp Software ("we", "us") collects,
@@ -343,7 +343,11 @@ export function TidemarkPrivacyPolicy() {
         that customer. If a customer asks to be deleted, we erase them, the
         orders Shopify names in the request, and their other orders from your
         backups as soon as the request arrives, and remove their ID from your
-        discount records. When Shopify asks us to erase a store's data, we
+        discount records. Shopify sends that request when you delete a
+        customer, so a deleted customer is erased right away and can't be
+        restored. We keep only the Shopify IDs of what we erased, for two
+        days, so a backup that was already running can't save it again. When
+        Shopify asks us to erase a store's data, we
         erase everything we hold for that store, unless the store has
         installed the App again by then.
       </p>
